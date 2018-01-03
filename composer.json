@@ -1,0 +1,27 @@
+{
+    "name": "jhorlima/mb-repository",
+    "description": "Modulo de Repositório para o MocaBonita",
+    "version": "1.0.0",
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "mocabonita",
+        "wp-mocabonita"
+    ],
+    "homepage": "https://github.com/jhorlima/mb-repository",
+    "type": "wordpress-framework-plugin",
+    "authors": [
+        {
+            "name": "Jhordan Lima",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MbRepository\\": "./"
+        }
+    },
+    "require": {
+        "jhorlima/wp-mocabonita": ">=3.3.1"
+    }
+}
