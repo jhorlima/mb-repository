@@ -176,7 +176,14 @@ abstract class BaseRepository implements RepositoryInterface
         //
     }
 
-    protected function event(RepositoryEvent $event, MbModel $model, MbModel $originalModel = null)
+    /**
+     * @param RepositoryEvent $event
+     * @param MbModel         $model
+     * @param MbModel|null    $originalModel
+     *
+     * @return $this
+     */
+    protected function event($event, MbModel $model, MbModel $originalModel = null)
     {
         if ($event instanceof RepositoryEntityCreated || $event instanceof RepositoryEntityDeleted) {
             $this->event = $event->apply($this, $model);
